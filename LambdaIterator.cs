@@ -8,14 +8,18 @@ namespace BinaryTreeLab.Tree
     {
       var result = new List<BinaryTreeNode<T>>();
       InOrderTraversal(root, result);
+
       return result;
     }
 
     private static void InOrderTraversal<T>(BinaryTreeNode<T>? node, List<BinaryTreeNode<T>> result)
     {
-      if (node == null) return;
+      if (node == null)
+      {
+        return;
+      }
 
-      InOrderTraversal(node.Left, result);
+        InOrderTraversal(node.Left, result);
       result.Add(node);
       InOrderTraversal(node.Right, result);
     }
