@@ -19,7 +19,7 @@ namespace BinaryTreeLab.Tree
         return;
       }
 
-        InOrderTraversal(node.Left, result);
+      InOrderTraversal(node.Left, result);
       result.Add(node);
       InOrderTraversal(node.Right, result);
     }

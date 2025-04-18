@@ -2,17 +2,17 @@ namespace BinaryTreeLab.Tree
 {
   public class BinaryTree<T> where T : IComparable<T>
   {
-    public BinaryTreeNode<T>? Root { get; private set; }
+    public BinaryTreeNode<T>? root { get; private set; }
 
     public void Insert(T value)
     {
-      if (Root == null)
+      if (root == null)
       {
-        Root = new BinaryTreeNode<T>(value);
+        root = new BinaryTreeNode<T>(value);
       }
       else
       {
-        Insert(Root, value);
+        Insert(root, value);
       }
     }
 
